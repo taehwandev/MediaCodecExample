@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="net.thdev.audiodecoder.DecoderActivity$PlaceholderFragment" >
+    tools:context="net.thdev.mediacodecexample.decoder.DecoderActivity$PlaceholderFragment" >
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,6 +15,6 @@
         android:id="@+id/play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/play" />
+        android:text="@string/aac_play" />
 
 </LinearLayout>

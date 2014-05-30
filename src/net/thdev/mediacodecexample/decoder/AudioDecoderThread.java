@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.thdev.audiodecoder;
+package net.thdev.mediacodecexample.decoder;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -33,7 +33,8 @@ import android.util.Log;
  * @author taehwan
  *
  */
-public class AudioDecoder {
+public class AudioDecoderThread {
+	private static final int TIMEOUT_US = 1000;
 	private MediaExtractor mExtractor;
 	private MediaCodec mDecoder;
 	
@@ -166,7 +167,7 @@ public class AudioDecoder {
 		audioTrack.play();
 		
 		while (!eosReceived) {
-			int inIndex = mDecoder.dequeueInputBuffer(10000);
+			int inIndex = mDecoder.dequeueInputBuffer(TIMEOUT_US);
 			if (inIndex >= 0) {
 				ByteBuffer buffer = inputBuffers[inIndex];
 				int sampleSize = mExtractor.readSampleData(buffer, 0);
@@ -182,7 +183,7 @@ public class AudioDecoder {
 					mExtractor.advance();
 				}
 				
-				int outIndex = mDecoder.dequeueOutputBuffer(info, 10000);
+				int outIndex = mDecoder.dequeueOutputBuffer(info, TIMEOUT_US);
 				switch (outIndex) {
 				case MediaCodec.INFO_OUTPUT_BUFFERS_CHANGED:
 					Log.d("DecodeActivity", "INFO_OUTPUT_BUFFERS_CHANGED");
@@ -230,6 +231,10 @@ public class AudioDecoder {
 		audioTrack.stop();
 		audioTrack.release();
 		audioTrack = null;
+	}
+	
+	public void stop() {
+		eosReceived = true;
 	}
 
 }

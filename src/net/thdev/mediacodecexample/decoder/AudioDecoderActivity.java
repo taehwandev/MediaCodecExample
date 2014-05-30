@@ -1,4 +1,4 @@
-package net.thdev.audiodecoder;
+package net.thdev.mediacodecexample.decoder;
 
 import net.thdev.mediacodec.R;
 import android.app.Activity;
@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class AudioDecoderActivity extends Activity {
+	
+	protected static AudioDecoderThread mAudioDecoder;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,12 @@ public class AudioDecoderActivity extends Activity {
 			getFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+	}
+	
+	@Override
+	protected void onStop() {
+		super.onStop();
+		mAudioDecoder.stop();
 	}
 
 	@Override
@@ -51,10 +59,9 @@ public class AudioDecoderActivity extends Activity {
 	 */
 	public static class PlaceholderFragment extends Fragment {
 		private static final String SAMPLE = Environment.getExternalStorageDirectory() + "/temp.aac";
-		private AudioDecoder mAudioDecoder;
 
 		public PlaceholderFragment() {
-			mAudioDecoder = new AudioDecoder();
+			mAudioDecoder = new AudioDecoderThread();
 		}
 
 		@Override
