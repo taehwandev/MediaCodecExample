@@ -1,17 +1,18 @@
 # Android MediaCodec example
 
-Create a sample using Android MediaCodec.
-Use MediaCodec Decoder examples.
+Create a sample using Android MediaCodec. Use MediaCodec Decoder examples.
+
+AAC, MP4 decoder example. use MdieCodec.
 
 ## Change log
 
-first create 2014. - eclipse project.
-chagen android studio 4.1.1 2020.
+- first create 2014. eclipse project.
+- chagen android studio 4.1.1 2020.
 
 ## Decoder Example
 
-AAC, MP4 example only
-There is a lot of legacy code, so just for reference.
+- AAC, MP4 example only
+- There is a lot of legacy code, so just for reference.
 
 ## Use Android API
 
