@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import tech.thdev.mediacodecexample.audio.AACAudioDecodeActivity
 import tech.thdev.mediacodecexample.databinding.FragmentFirstBinding
 import tech.thdev.mediacodecexample.video.VideoDecodeActivity
 
@@ -34,6 +35,10 @@ class FirstFragment : Fragment() {
 
         binding.buttonVideoExample.setOnClickListener {
             startActivity(VideoDecodeActivity.newIntent(requireContext()))
+        }
+
+        binding.buttonAudioExample.setOnClickListener {
+            startActivity(AACAudioDecodeActivity.newIntent(requireContext()))
         }
     }
 
