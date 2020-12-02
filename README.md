@@ -4,6 +4,10 @@ Create a sample using Android MediaCodec. Use MediaCodec Decoder examples.
 
 AAC, MP4 decoder example. use MdieCodec.
 
+- Base Kotlin.
+- Base Android studio 4.1.1
+- Use Android MediaCodec.
+
 ## Change log
 
 - 2014 : first create eclipse project.
