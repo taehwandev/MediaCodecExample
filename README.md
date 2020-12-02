@@ -6,8 +6,8 @@ AAC, MP4 decoder example. use MdieCodec.
 
 ## Change log
 
-- first create 2014. eclipse project.
-- chagen android studio 4.1.1 2020.
+- 2014 : first create eclipse project.
+- 2020 : chagen Android Studio 4.1.1 base. and use Kotlin only
 
 ## Decoder Example
 
