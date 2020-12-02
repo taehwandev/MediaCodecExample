@@ -3,6 +3,11 @@
 Create a sample using Android MediaCodec.
 Use MediaCodec Decoder examples.
 
+## Change log
+
+first create 2014. - eclipse project.
+chagen android studio 4.1.1 2020.
+
 ## Decoder Example
 
 AAC, MP4 example only
