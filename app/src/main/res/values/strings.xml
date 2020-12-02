@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MediaCodecExample</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">MediaCodec example</string>
+
+    <string name="video_example">MP4 Video example</string>
+    <string name="audio_example">AAC Audio example</string>
+    <string name="label_play_aac">Play aac</string>
+</resources>

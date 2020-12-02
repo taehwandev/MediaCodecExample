@@ -79,5 +79,3 @@ lint/tmp/
 # Android Profiling
 *.hprof
 
-# Mac file
-.DS_Store
